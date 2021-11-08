@@ -302,15 +302,6 @@ ul {
   margin: -1px;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-  /* outline: 2px solid red; */
-}
-
 .portfolio__button, .footer__button, .modal__button, .hero__button {
   padding: 10px 32px;
   font-family: inherit;
@@ -333,133 +324,61 @@ ul {
   margin-bottom: 50px;
 }
 
-.header {
-  border-bottom: 1px solid #ececec;
-  padding-top: 24px;
-  padding-bottom: 25px;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
+@media screen and (min-width: 786px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-widh: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .header__logo {
   color: #000000;
-}
-
-.header__contacts {
-  margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: inherit;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__link:focus, .header__link:hover {
-  color: #2196f3;
-}
-
-.header__link:not(:first-child) {
-  margin-left: 50px;
-}
-
-.header__svg {
-  margin-right: 10px;
-  fill: #757575;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header__svg--mail {
-  width: 20px;
-  height: 15px;
-}
-.header__svg--tel {
-  width: 16px;
-  height: 25px;
-}
-.header__link:focus .header__svg, .header__link:hover .header__svg {
-  fill: #2196f3;
 }
 
 .site-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.site-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
-}
-
-.site-nav__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.site-nav__link {
-  position: relative;
-  display: block;
-  color: #212121;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.site-nav__link--active {
-  color: #2196f3;
-}
-.site-nav__link:focus, .site-nav__link:hover {
-  color: #2196f3;
-}
-.site-nav__link::after {
-  content: "";
+.site-nav__menu-container {
   position: absolute;
-  width: 100%;
-  height: 4px;
+  top: 0;
   left: 0;
-  top: 44px;
-  background: #2196f3;
-  border-radius: 2px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding: 48px 40px;
+  background-color: #ffffff;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-nav__link:hover::after, .site-nav__link:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-.site-nav .site-nav__link--active::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+.site-nav__menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
 }
 
 .logo {
@@ -468,8 +387,8 @@ ul {
   font-style: normal;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #2196f3;
 }
