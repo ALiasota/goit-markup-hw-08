@@ -1,0 +1,61 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    color: #000000;
+  }
+}
+
+.header__contacts {
+  margin-left: auto;
+  display: flex;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  @include animation-function(color);
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.header__link:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header__svg {
+  margin-right: 10px;
+  fill: $text-color;
+  @include animation-function(fill);
+
+  &--mail {
+    width: 20px;
+    height: 15px;
+  }
+
+  &--tel {
+    width: 16px;
+    height: 25px;
+  }
+
+  .header__link:focus &,
+  .header__link:hover & {
+    fill: $accent-color;
+  }
+}

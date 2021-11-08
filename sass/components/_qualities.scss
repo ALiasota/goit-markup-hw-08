@@ -1,0 +1,39 @@
+.qualities {
+  padding-top: 94px;
+}
+
+.qualities__list {
+  display: flex;
+}
+
+.qualities__item {
+  flex-basis: calc(100% / 4 - 30px);
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.qualities__contain-svg {
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.qualities__svg {
+  width: 70px;
+  height: 70px;
+}
+
+.qualities__title {
+  color: $tile-color;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}

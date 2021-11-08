@@ -1,0 +1,80 @@
+.team {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team__list {
+  display: flex;
+}
+
+.team__item {
+  display: block;
+  flex-basis: calc(100% / 4 - 30px);
+  background-color: $bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.team__member-discr {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.team__member-name {
+  color: $tile-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.team__member-position {
+  margin-bottom: 16px;
+}
+
+.team__soc-seti {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.team__soc-seti-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team__soc-seti-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background: $bg-color;
+  @include animation-function(background);
+
+  &:focus,
+  &:hover {
+    background: $accent-color;
+  }
+}
+
+.team__soc-seti-svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  @include animation-function(fill);
+
+  .team__soc-seti-link:focus &,
+  .team__soc-seti-link:hover & {
+    fill: $white-color;
+  }
+}
