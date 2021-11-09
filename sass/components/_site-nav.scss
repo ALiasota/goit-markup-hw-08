@@ -25,6 +25,54 @@
   }
 }
 
+.site-nav__button {
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding: 0;
+  border: none;
+  background: $bg-color;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.site-nav__icon-close,
+.site-nav__icon-menu {
+  width: 40px;
+  height: 40px;
+  fill: #000000;
+  @include animation-function(fill);
+  @include animation-function(opacity);
+
+  .site-nav__button:hover  &,
+  .site-nav__button:focus  & {
+    fill: $accent-color;
+}
+}
+
+.site-nav__icon-close {
+  opacity: 0;
+
+  .site-nav__button.is-open & {
+    opacity: 1;
+  }
+}
+
+.site-nav__icon-menu {
+  opacity: 1;
+
+  .site-nav__button.is-open & {
+    opacity: 0;
+  }
+}
+
+
 // .site-nav {
 //   display: flex;
 //   align-items: center;
