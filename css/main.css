@@ -589,7 +589,7 @@ ul {
   position: absolute;
   background: #ffffff;
   width: 450px;
-  min-height: 609px;
+  height: 609px;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -993,4 +993,56 @@ ul {
 }
 .team__soc-seti-link:focus .team__soc-seti-svg, .team__soc-seti-link:hover .team__soc-seti-svg {
   fill: #ffffff;
+}
+
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.clients__item {
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.clients__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
+.clients__link {
+  border: 1px solid #afb1b8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  height: 92px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients__svg {
+  width: 106px;
+  height: 92px;
+  fill: #afb1b8;
+  -webkit-transition: fill 250ms var(--animation-funct);
+  transition: fill 250ms var(--animation-funct);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients__link:focus > .clients__svg, .clients__link:hover > .clients__svg {
+  fill: #2196f3;
 }/*# sourceMappingURL=main.css.map */
