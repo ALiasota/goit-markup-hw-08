@@ -7,14 +7,16 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow-y: scroll;
+  padding: 93px 15px;
   @include animation-function(opacity);
 
   &.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-}
+    opacity: 0;
 
+    pointer-events: none;
+  }
+}
 
 .modal__window {
   position: absolute;
@@ -34,7 +36,6 @@
     transform: rotate(0.5turn);
   }
 }
-
 
 .modal__head {
   margin-bottom: 12px;
@@ -236,8 +237,6 @@
   text-decoration-line: underline;
   color: #2196f3;
 }
-
-
 
 // .modal__backdrop {
 //   z-index: 1;
