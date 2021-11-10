@@ -10,10 +10,14 @@
 
 .footer__cont {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer__text {
+  min-width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -23,9 +27,16 @@
   margin-bottom: 20px;
 }
 
+.footer__seti-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 300px;
+}
+
 .footer__soc-seti {
   display: flex;
-  margin-right: 93px;
+  margin-bottom: 60px;
   padding: 0;
 }
 
@@ -56,14 +67,16 @@
   fill: $white-color;
 }
 
-.footer__label {
-  margin-right: 12px;
+.footer_form-cont {
+  display: block;
+  width: 100%;
 }
 
 .footer__input {
   display: inline-block;
-  width: 358px;
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
   padding-left: 16px;
   color: $white-color;
   box-sizing: border-box;
@@ -88,6 +101,8 @@
 
 .footer__button {
   @extend %button;
+  display: block;
+  margin: 0 auto;
   box-sizing: border-box;
   position: relative;
   padding-right: 62px;
@@ -109,3 +124,115 @@
   top: 13px;
   right: 28px;
 }
+
+// .footer {
+//   background-color: #2f303a;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+
+//   &__logo {
+//     color: $white-color;
+//   }
+// }
+
+// .footer__cont {
+//   display: flex;
+//   align-items: baseline;
+// }
+
+// .footer__text {
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.03em;
+//   text-transform: uppercase;
+//   color: $white-color;
+//   margin-bottom: 20px;
+// }
+
+// .footer__soc-seti {
+//   display: flex;
+//   margin-right: 93px;
+//   padding: 0;
+// }
+
+// .footer__soc-seti-item:not(:last-child) {
+//   margin-right: 10px;
+// }
+
+// .footer__soc-seti-link {
+//   display: flex;
+//   width: 44px;
+//   height: 44px;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 50%;
+//   border: none;
+//   background: rgba(255, 255, 255, 0.1);
+//   @include animation-function(background);
+
+//   &:focus,
+//   &:hover {
+//     background: $accent-color;
+//   }
+// }
+
+// .footer__soc-seti-svg {
+//   width: 20px;
+//   height: 20px;
+//   fill: $white-color;
+// }
+
+// .footer__label {
+//   margin-right: 12px;
+// }
+
+// .footer__input {
+//   display: inline-block;
+//   width: 358px;
+//   height: 50px;
+//   padding-left: 16px;
+//   color: $white-color;
+//   box-sizing: border-box;
+//   background: transparent;
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+//   border-radius: 4px;
+//   @include animation-function(border);
+
+//   &::placeholder {
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+
+//   .footer__label:focus-within > & {
+//     outline: none;
+//     border: 1px solid #2196f3;
+//   }
+// }
+
+// .footer__button {
+//   @extend %button;
+//   box-sizing: border-box;
+//   position: relative;
+//   padding-right: 62px;
+//   height: 50px;
+//   background: $accent-color;
+//   color: $white-color;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   @include animation-function(background);
+
+//   &:hover,
+//   &:focus {
+//     background: #188ce8;
+//     cursor: pointer;
+//   }
+// }
+
+// .footer__send-icon {
+//   position: absolute;
+//   top: 13px;
+//   right: 28px;
+// }

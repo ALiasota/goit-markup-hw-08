@@ -13,45 +13,87 @@
 
 <body>
     <!--Шапка сайта-->
-<header class="header">
-    <div class="header__container container">
-        <nav class="site-nav">
-            <a href="./index.html" class="logo">
-                <span lang="en">Web</span><span class="header__logo" lang="en">Studio</span>
-            </a>
-            <ul class="site-nav__list">
-                <li class="site-nav__item"><a class="site-nav__link " href="index.html">Студия</a></li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="">Портфолио</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="header__contacts">
-            <a class="header__link" href="mailto:info@devstudio.com">
-                <svg class="header__svg header__svg--mail">
-                    <use href="./images/icons.svg#icon-mail-to-svg"></use>
-                </svg>
-                info@devstudio.com
-            </a>
-            <a class="header__link" href="tel:+380961111111">
-                <svg class="header__svg header__svg--tel">
-                    <use href="./images/icons.svg#icon-phone-to-svg"></use>
-                </svg>
-                +38 096 111 11 11</a>
+    <header class="header">
+        <div class="container">
+            <div>
+                <nav class="site-nav">
+                    <a href="./index.html" class="logo">
+                        <span lang="en">Web</span><span class="header__logo" lang="en">Studio</span>
+                    </a>
+                    <div class="site-nav__menu-container" id="menu-container" data-menu>
+                        <ul class="site-nav__list">
+                            <li class="site-nav__item"><a class="site-nav__link " href="index.html">Студия</a>
+                            </li>
+                            <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="">Портфолио</a></li>
+                            <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
+                        </ul>
+                        <div class="site-nav__contact-cont">
+                            <div class="header__contacts">
+                                <a class="header__link-mail" href="mailto:info@devstudio.com">
+                                    <svg class="header__svg header__svg--mail">
+                                        <use href="./images/icons.svg#icon-mail-to-svg"></use>
+                                    </svg>
+                                    info@devstudio.com
+                                </a>
+                                <a class="header__link-tel" href="tel:+380961111111">
+                                    <svg class="header__svg header__svg--tel">
+                                        <use href="./images/icons.svg#icon-phone-to-svg"></use>
+                                    </svg>
+                                    +38 096 111 11 11</a>
+                            </div>
+                            <div>
+                                <ul class="site-nav__soc-seti">
+                                    <li class="site-nav__soc-seti-item">
+                                        <a href="" aria-label="Instagram" class="site-nav__soc-seti-link">
+                                            Instagram
+                                        </a>
+                                    </li>
+                                    <li class="site-nav__soc-seti-item">
+                                        <a href="" aria-label="Twiter" class="site-nav__soc-seti-link">
+                                            Twiter
+                                        </a>
+                                    </li>
+                                    <li class="site-nav__soc-seti-item">
+                                        <a href="" aria-label="Facebook" class="site-nav__soc-seti-link">
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li class="site-nav__soc-seti-item">
+                                        <a href="" aria-label="Linkedin" class="site-nav__soc-seti-link">
+                                            Linkedin
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <button type="button" class="site-nav__button" aria-expanded="false" aria-controls="menu-container"
+                        data-menu-button>
+                        <svg width="40px" height="40px">
+                            <use class="site-nav__icon-close" href="./images/icons.svg#icon-close-svg"></use>
+                            <use class="site-nav__icon-menu" href="./images/icons.svg#icon-meny-svg"></use>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main>
         <section class="portfolio">
             <div class="container">
                 <h1 class="transparent">Портфолио</h1>
-                <ul class="porfolio__menu">
-                    <li><button type="button" class="portfolio__button">Все</button></li>
-                    <li><button type="button" class="portfolio__button">Веб-сайты</button></li>
-                    <li><button type="button" class="portfolio__button">Приложения</button></li>
-                    <li><button type="button" class="portfolio__button">Дизайн</button></li>
-                    <li><button type="button" class="portfolio__button">Маркетинг</button></li>
-                </ul>
+                <div class="porfolio__menu-cont">
+                    <ul class="porfolio__menu">
+                        <li class="porfolio__menu-item"><button type="button" class="portfolio__button">Все</button></li>
+                        <li class="porfolio__menu-item"><button type="button" class="portfolio__button">Веб-сайты</button></li>
+                        <li class="porfolio__menu-item"><button type="button" class="portfolio__button">Приложения</button></li>
+                        <li class="porfolio__menu-item"><button type="button" class="portfolio__button">Дизайн</button></li>
+                        <li class="porfolio__menu-item"><button type="button" class="portfolio__button">Маркетинг</button></li>
+                    </ul>
+                </div>
+                
                 <ul class="portfolio__projects">
                     <li class="portfolio__project-item">
                         <a href="" class="portfolio__link">
@@ -65,10 +107,9 @@
                                         ./images/desktop/gallary-1-370.jpg 370w,
                                         ./images/desktop/gallary-1-740.jpg 740w
                                         "                             
-                                src="./images/mobile/gallary-1-450.jpg"                                  
+                                 src="./images/mobile/gallary-1-450.jpg"                                  
                                  alt="Технокряк" 
-                                 sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
-                                 >
+                                 sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw">                                 
                                  <div class="portfolio__card">
                                     <p class="portfolio__card-text">
                                         Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -103,7 +144,7 @@
                                         ./images/desktop/gallary-2-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-2-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"                                 
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"                                 
                                 alt="Постер"                                
                                 >
                             </div>                            
@@ -132,7 +173,7 @@
                                         ./images/desktop/gallary-3-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-3-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw" 
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw" 
                                 alt="Ресторан">
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -160,7 +201,7 @@
                                         ./images/desktop/gallary-4-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-4-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"
                                 alt="Наушники">
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -188,7 +229,7 @@
                                         ./images/desktop/gallary-5-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-5-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"
                                 alt="Коробки">
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -216,7 +257,7 @@
                                         ./images/desktop/gallary-6-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-6-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"
                                 alt="Монитор">
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -244,7 +285,7 @@
                                         ./images/desktop/gallary-7-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-7-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"
                                 alt="Издание">
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -272,7 +313,7 @@
                                         ./images/desktop/gallary-8-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-8-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"
                                 alt="Бейдж">
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -300,7 +341,7 @@
                                         ./images/desktop/gallary-9-740.jpg 740w
                                         "                             
                                 src="./images/mobile/gallary-9-450.jpg"
-                                sizes="(min-width:1200px) 33vw, (min-width:768px) 50vw, (min-width:480px) 100vw"
+                                sizes="(max-width: 479px) calc(100vw - 30px), (max-width: 767px) 50vw, (min-width: 1200px) 33vw"
                                 alt="Ноутбук"> 
                             </div>                            
                             <div class="portfolio__project-discr">
@@ -340,7 +381,7 @@
                     </li>
                 </ul>
             </address>
-            <div class="seti-foot">
+            <div class="footer__seti-cont">
                 <p class="footer__text">присоединяйтесь</p>
                 <ul class="footer__soc-seti">
                     <li class="footer__soc-seti-item">
@@ -373,7 +414,7 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class="footer_form-cont">
                 <p class="footer__text">Подпишитесь на рассылку</p>
                 <form class="footer__form">
                     <label class="footer__label">
@@ -388,6 +429,8 @@
                 </form>
             </div>
         </div>
+
+        <script src="./js/menu.js"></script>
     </footer>
 </body>
 
