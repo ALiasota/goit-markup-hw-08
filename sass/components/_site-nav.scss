@@ -1,37 +1,41 @@
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .site-nav__menu-container {
-  z-index: 1;
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 796px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  padding: 48px 40px;
-  background-color: $bg-color;
-  @include animation-function(opacity);
+  @media screen and (max-width: 767px) {
+    z-index: 1;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    padding: 48px 40px;
+    background-color: $bg-color;
+    @include animation-function(opacity);
 
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
   }
 }
 
 .site-nav__button {
   z-index: 2;
   position: absolute;
-  top: 10px;
+  top: -6px;
   right: 15px;
   width: 40px;
   height: 40px;
@@ -42,6 +46,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .site-nav__icon-close,
@@ -74,8 +82,25 @@
   }
 }
 
-.site-nav__item:not(:last-child) {
-  margin-bottom: 32px;
+.site-nav__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-right: 84px;
+  }
+}
+
+.site-nav__item {
+  @media screen and (max-widh: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .site-nav__link {
@@ -84,7 +109,6 @@
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-
   @include animation-function(color);
 
   &--active {
@@ -95,38 +119,97 @@
   &:hover {
     color: $accent-color;
   }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.14;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      top: 44px;
+      background: $accent-color;
+      border-radius: 2px;
+      transform: scaleX(0);
+      @include animation-function(transform);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
+    }
+
+    .site-nav &--active::after {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .header__contacts {
   display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 64px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .header__svg {
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+    fill: $text-color;
+    @include animation-function(fill);
+
+    &--mail {
+      width: 14px;
+      height: 10px;
+    }
+
+    &--tel {
+      width: 10px;
+      height: 14px;
+    }
+  }
 }
 
-.header__link-mail {
+.header__link {
   font-weight: 500;
-  font-size: 24px;
+  letter-spacing: 0.02em;
   line-height: 1.17;
-  letter-spacing: 0.02em;
-}
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
 
-.header__link-tel {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  color: $accent-color;
-  margin-bottom: 32px;
+    &--tel {
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 .site-nav__soc-seti {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .site-nav__soc-seti-item {
@@ -135,12 +218,6 @@
     padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
-
-  // &:not(:first-child) {
-
-  //    padding-left: 9px;
-  //   border-left: 1px solid rgba(33, 33, 33, 0.2);
-  // }
 }
 
 .site-nav__soc-seti-link {
