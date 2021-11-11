@@ -29,13 +29,13 @@
                         </ul>
                         <div class="site-nav__contact-cont">
                             <div class="header__contacts">
-                                <a class="header__link-mail" href="mailto:info@devstudio.com">
+                                <a class="header__link" href="mailto:info@devstudio.com">
                                     <svg class="header__svg header__svg--mail">
                                         <use href="./images/icons.svg#icon-mail-to-svg"></use>
                                     </svg>
                                     info@devstudio.com
                                 </a>
-                                <a class="header__link-tel" href="tel:+380961111111">
+                                <a class="header__link header__link--tel" href="tel:+380961111111">
                                     <svg class="header__svg header__svg--tel">
                                         <use href="./images/icons.svg#icon-phone-to-svg"></use>
                                     </svg>
@@ -71,7 +71,7 @@
                     <button type="button" class="site-nav__button" aria-expanded="false" aria-controls="menu-container"
                         data-menu-button>
                         <svg width="40px" height="40px">
-                            <use class="site-nav__icon-close" href="./images/icons.svg#icon-close-svg"></use>
+                            <use class="site-nav__icon-close" href="./images/icons.svg#icon-1close-svg"></use>
                             <use class="site-nav__icon-menu" href="./images/icons.svg#icon-meny-svg"></use>
                         </svg>
                     </button>
@@ -109,7 +109,8 @@
                                         "                             
                                  src="./images/mobile/gallary-1-450.jpg"                                  
                                  alt="Технокряк" 
-                                 sizes="(min-width: 480px) calc(100vw - 30px), (min-width: 768px) 50vw, (min-width: 1200px) 33vw">                                 
+                                 sizes="(min-width: 480px) calc(100vw - 30px), (min-width: 768px) 50vw, (min-width: 1200px) 33vw">
+                                                                  
                                  <div class="portfolio__card">
                                     <p class="portfolio__card-text">
                                         Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
@@ -359,7 +360,7 @@
     
     <footer class="footer">
         <div class="container footer__cont">
-            <address>
+            <address class="address">
                 <ul class="address__list">
                     <li class="address__item">
                         <a href="./index.html" class="logo">
@@ -429,9 +430,8 @@
                 </form>
             </div>
         </div>
-
-        <script src="./js/menu.js"></script>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
