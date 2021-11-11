@@ -26,7 +26,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: block;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
@@ -35,12 +36,12 @@
     display: none;
   }
   @media screen and (min-width: 768px) {
-    margin-right: 8px;
+    margin-right: 7px;
     fill: $text-color;
     @include animation-function(fill);
 
     &--mail {
-      width: 14px;
+      width: 13px;
       height: 10px;
     }
 
@@ -68,6 +69,8 @@
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
     font-size: 12px;
   }
 }

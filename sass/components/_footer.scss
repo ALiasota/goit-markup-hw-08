@@ -6,6 +6,13 @@
   &__logo {
     color: $white-color;
   }
+  @media screen and (min-width: 768px) {
+    &__cont {
+      display: flex;
+      // padding-left: 76px;
+      align-items: baseline;
+    }
+  }
 }
 
 .footer__cont {
@@ -15,7 +22,9 @@
 }
 
 .footer__text {
-  min-width: 300px;
+  @media screen and (max-width: 767px) {
+    min-width: 300px;
+  }
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
@@ -28,10 +37,12 @@
 }
 
 .footer__seti-cont {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  min-width: 300px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 300px;
+  }
 }
 
 .footer__soc-seti {
@@ -70,6 +81,7 @@
 .footer_form-cont {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 .footer__input {
@@ -85,6 +97,10 @@
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   @include animation-function(border);
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
 
   &::placeholder {
     font-size: 16px;

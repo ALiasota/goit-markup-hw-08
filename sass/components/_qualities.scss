@@ -1,16 +1,31 @@
 .qualities {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .qualities__list {
-  display: block;
-  width: 100%;
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px -15px;
+  }
 }
 
 .qualities__item {
-  &:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 30px;
+    flex-basis: calc((100% / 2) - 30px);
   }
 }
 

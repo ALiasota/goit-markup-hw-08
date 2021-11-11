@@ -5,8 +5,16 @@
 }
 
 .team__list {
-  display: block;
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px -15px;
+  }
 }
 
 .team__item {
@@ -17,8 +25,14 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin: 0 15px 30px 15px;
+    flex-basis: calc((100% / 2) - 30px);
   }
 }
 
