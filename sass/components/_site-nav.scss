@@ -11,6 +11,7 @@
     justify-content: space-between;
     top: 0;
     left: 0;
+    width: 480px;
     max-width: 100%;
     height: 796px;
     opacity: 0;
@@ -33,8 +34,8 @@
 }
 
 .site-nav__button {
-  z-index: 2;
   position: absolute;
+  z-index: 2;
   top: -6px;
   right: 15px;
   width: 40px;
@@ -146,60 +147,6 @@
     .site-nav &--active::after {
       transform: scaleX(1);
     }
-  }
-}
-
-.header__contacts {
-  display: flex;
-  @media screen and (max-width: 767px) {
-    flex-direction: column-reverse;
-    margin-bottom: 64px;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
-}
-
-.header__svg {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    margin-right: 8px;
-    fill: $text-color;
-    @include animation-function(fill);
-
-    &--mail {
-      width: 14px;
-      height: 10px;
-    }
-
-    &--tel {
-      width: 10px;
-      height: 14px;
-    }
-  }
-}
-
-.header__link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.17;
-  @media screen and (max-width: 767px) {
-    font-size: 24px;
-
-    &--tel {
-      font-size: 34px;
-      line-height: 1.18;
-      letter-spacing: 0.02em;
-      color: $accent-color;
-      margin-bottom: 32px;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 12px;
   }
 }
 
