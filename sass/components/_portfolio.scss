@@ -103,8 +103,13 @@
 }
 
 .portfolio__card-text {
+  @media screen and (max-width: 767px) {
+    width: 402px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 306px;
+  }
   display: block;
-  width: 402px;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
