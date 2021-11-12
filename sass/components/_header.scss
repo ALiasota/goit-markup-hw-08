@@ -14,8 +14,14 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {    
+    padding-top: 26px;
+    padding-bottom: 27px;   
+    
   }
 }
 
@@ -29,6 +35,11 @@
   @media screen and (min-width: 768px) {
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    margin-left: auto;    
   }
 }
 
@@ -49,6 +60,27 @@
     &--tel {
       width: 10px;
       height: 14px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    fill: $text-color;
+    @include animation-function(fill);
+
+    &--mail {
+      width: 20px;
+      height: 15px;
+    }
+
+    &--tel {
+      width: 16px;
+      height: 25px;
+    }
+
+    .header__link:focus &,
+    .header__link:hover & {
+      fill: $accent-color;
     }
   }
 }
@@ -75,9 +107,26 @@
     font-size: 12px;
 
     &--tel {
-      margin-top: 10px;
+      margin-top: 8px;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+  
+    @include animation-function(color);
+
+    &--tel {
+      margin-top: 0;
+      margin-left: 50px;
+    }
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  
 }
 
 // .header {
