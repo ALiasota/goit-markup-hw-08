@@ -25,6 +25,8 @@
   }
 }
 
+
+
 .header__contacts {
   display: flex;
   @media screen and (max-width: 767px) {
@@ -39,7 +41,7 @@
 
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
-    margin-left: auto;    
+       
   }
 }
 

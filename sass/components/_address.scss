@@ -2,11 +2,14 @@
   @media screen and (min-width: 768px) {
     margin-right: 165px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
-.address__list {
+@media screen and (man-width: 1199px) {
+  .address__list {
   margin-bottom: 60px;
-}
-
+  }
 .address__item {
   display: flex;
   justify-content: center;
@@ -16,18 +19,32 @@
   &:not(:last-child, :first-child) {
     margin-bottom: 8px;
   }
+  }
 }
+
+.address__item {
+  &:first-child {
+    margin-bottom: 20px;
+  }
+  &:not(:last-child, :first-child) {
+    margin-bottom: 9px;
+  }
+}
+
+
 
 .address__link {
   display: block;
-  text-decoration: none;
-  text-align: center;
+  text-decoration: none;  
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
   &--white {
     color: $white-color;
   }
