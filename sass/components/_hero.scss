@@ -123,31 +123,3 @@
     cursor: pointer;
   }
 }
-
-// .hero__title {
-//   width: 696px;
-//   margin: 0 auto;
-//   font-weight: 900;
-//   font-size: 44px;
-//   line-height: 1.36;
-//   text-align: center;
-//   letter-spacing: 0.06em;
-//   text-transform: uppercase;
-//   color: $white-color;
-//   display: block;
-//   margin-bottom: 30px;
-// }
-
-// .hero__button {
-//   @extend %button;
-//   background: $accent-color;
-//   color: $white-color;
-//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//   @include animation-function(background);
-
-//   &:hover,
-//   &:focus {
-//     background: #188ce8;
-//     cursor: pointer;
-//   }
-// }
