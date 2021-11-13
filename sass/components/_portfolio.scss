@@ -11,7 +11,7 @@
 .porfolio__menu-cont {
   margin-bottom: 40px;
 
-  @media screen and (min-width: 768px) {    
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
   }
@@ -84,6 +84,7 @@
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #eeeeee;
   @include animation-function(box-shadow);
 
   &:hover,
@@ -137,7 +138,8 @@
   display: block;
   height: 100%;
   padding: 20px 24px;
-  border: 1px Solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
   border-top: 0;
   background-color: $white-color;
 }

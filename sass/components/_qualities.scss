@@ -40,9 +40,8 @@
   }
 
   @media screen and (min-width: 1200px) {
-      flex-basis: calc((100% / 4) - 30px);      
-        margin-left: 30px;
-      
+    flex-basis: calc((100% / 4) - 30px);
+    margin-left: 30px;
   }
 }
 
@@ -68,4 +67,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
